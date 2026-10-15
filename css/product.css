@@ -1,0 +1,166 @@
+.product {
+  display: grid;
+  grid-template-columns: minmax(0, 1.012fr) minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  scroll-margin-top: 24px;
+}
+
+.product-details {
+  min-width: 0;
+}
+
+.product-heading {
+  position: relative;
+  padding-top: 0;
+}
+
+.product-actions {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  display: flex;
+  gap: 7px;
+}
+
+.product-actions .icon {
+  width: 19px;
+  height: 19px;
+}
+
+.product-title {
+  margin-top: 0;
+  font-family: "PT Serif", Georgia, serif;
+  font-size: clamp(30px, 3.15vw, 42px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.product-category {
+  margin-top: 8px;
+  padding-right: 88px;
+  color: #6d6d65;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.review-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  margin-top: 22px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.review-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 1px;
+  color: #bbc915;
+}
+
+.rating-stars .icon {
+  width: 17px;
+  height: 17px;
+  stroke-width: 1.4;
+}
+
+.product-sku {
+  margin-left: auto;
+  color: var(--color-muted);
+  white-space: nowrap;
+}
+
+.product-intro {
+  margin-top: 16px;
+  color: #5d5d54;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.product-purchase {
+  position: relative;
+  margin-top: 16px;
+  scroll-margin-top: 24px;
+}
+
+.share-status {
+  position: absolute;
+  z-index: 2;
+  top: 44px;
+  right: 0;
+  width: 280px;
+  padding: 16px 18px;
+  border: 1px solid #e2e6b7;
+  border-radius: 8px;
+  background: #fffef7;
+  color: #4b493a;
+  box-shadow: 0 4px 18px rgb(0 0 0 / 10%);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.share-status:empty {
+  display: none;
+}
+
+@media (width < 1320px) {
+  .product {
+    gap: 24px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (width < 1024px) {
+  .product-title {
+    font-size: 30px;
+  }
+
+  .product-actions {
+    gap: 3px;
+  }
+
+  .product-actions .icon-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .review-row {
+    flex-wrap: wrap;
+    margin-top: 18px;
+    gap: 8px;
+  }
+
+  .product-intro {
+    margin-top: 14px;
+  }
+
+  .product-purchase {
+    margin-top: 22px;
+  }
+}
+
+@media (width < 640px) {
+  .product-title {
+    font-size: 32px;
+  }
+
+  .product-category {
+    font-size: 14px;
+  }
+
+  .review-row {
+    margin-top: 18px;
+  }
+}

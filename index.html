@@ -1,0 +1,971 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Ананасовый улун — светлый фуцзяньский чай с ароматом спелого ананаса. Фасовки от 100 г до 5 кг."
+    />
+    <title>Ананасовый улун — Чайный Бум</title>
+    <link rel="icon" href="./assets/logo.webp" type="image/webp" />
+    <link
+      rel="preload"
+      as="image"
+      href="./assets/tea-bowl.avif"
+      imagesrcset="
+        ./assets/tea-bowl-480.avif 480w,
+        ./assets/tea-bowl-640.avif 640w,
+        ./assets/tea-bowl-672.avif 672w,
+        ./assets/tea-bowl-768.avif 768w,
+        ./assets/tea-bowl.avif 1024w
+      "
+      imagesizes="(width < 640px) calc(100vw - 40px), (width < 1320px) 560px, 40vw"
+      fetchpriority="high"
+    />
+    <link rel="preload" href="./assets/open-sans.woff2" as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href="./assets/pt-serif-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./styles.css?v=3" />
+    <script src="./product.js?v=2" defer></script>
+    <script src="./ui.js" defer></script>
+  </head>
+  <body>
+    <svg class="icon-definitions" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <symbol id="i-search" viewBox="0 0 24 24">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5" />
+        </symbol>
+        <symbol id="i-user" viewBox="0 0 24 24">
+          <circle cx="12" cy="7" r="3.5" />
+          <path d="M4 21v-2a8 8 0 0 1 16 0v2" />
+        </symbol>
+        <symbol id="i-heart" viewBox="0 0 24 24">
+          <path
+            d="M20.5 4.8a5.2 5.2 0 0 0-7.4 0L12 6l-1.1-1.2a5.2 5.2 0 0 0-7.4 7.4L12 21l8.5-8.8a5.2 5.2 0 0 0 0-7.4Z"
+          />
+        </symbol>
+        <symbol id="i-cart" viewBox="0 0 24 24">
+          <path d="M2 3h3l2.5 12.5h11l2-9H6" />
+          <circle cx="9" cy="20" r="1" />
+          <circle cx="18" cy="20" r="1" />
+        </symbol>
+        <symbol id="i-share" viewBox="0 0 24 24">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4" />
+        </symbol>
+        <symbol id="i-zoom" viewBox="0 0 24 24">
+          <circle cx="10.5" cy="10.5" r="6.5" />
+          <path d="m16 16 5 5M7.5 10.5h6M10.5 7.5v6" />
+        </symbol>
+        <symbol id="i-leaf" viewBox="0 0 24 24">
+          <path d="M21 3C10 2 3 6 3 13a7 7 0 0 0 7 7c7 0 11-7 11-17ZM3 22 17 8" />
+        </symbol>
+        <symbol id="i-tea-leaf" viewBox="0 0 32 32">
+          <path
+            d="M27 4.5C16.5 3.8 7.2 8.3 7.2 17.2c0 4.3 2.4 7.2 6.4 7.2C22.1 24.4 27.2 14.6 27 4.5Z"
+          />
+          <path
+            d="M4.5 28C9.1 20.2 14.5 13.7 22.8 8.7M10.9 18.9c2.6.7 5.1.5 7.7-.5M15.7 14.2c-.2-1.8 0-3.5.8-5.2"
+            fill="none"
+          />
+        </symbol>
+        <symbol id="i-star" viewBox="0 0 24 24">
+          <path
+            d="m12 2 3 6.1 6.8 1-4.9 4.8 1.2 6.8L12 17.5l-6.1 3.2 1.2-6.8-4.9-4.8 6.8-1L12 2Z"
+          />
+        </symbol>
+        <symbol id="i-close" viewBox="0 0 24 24">
+          <path d="m6 6 12 12M6 18 18 6" />
+        </symbol>
+        <symbol id="i-package" viewBox="0 0 24 24">
+          <path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z M3 7l9 5 9-5 M12 12v10 M7.5 4.5l9 5v5" />
+        </symbol>
+        <symbol id="i-menu" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16" />
+        </symbol>
+      </defs>
+    </svg>
+    <a class="skip-link" href="#product">Перейти к товару</a>
+
+    <header class="site-header">
+      <div class="page-width header-inner">
+        <button
+          class="icon-button menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          aria-controls="site-nav"
+        >
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+        </button>
+        <a class="brand" href="https://teaboom.ru/" aria-label="Чайный Бум — главная">
+          <img src="./assets/logo.webp" alt="" width="44" height="44" />
+          <span>
+            <strong>Чайный Бум</strong>
+            <span class="brand-caption">Интернет-магазин чая и посуды</span>
+          </span>
+        </a>
+        <form class="catalog-search" id="catalog-search" role="search">
+          <svg class="icon" aria-hidden="true">
+            <use href="#i-search" />
+          </svg>
+          <input
+            id="search-input"
+            type="search"
+            name="q"
+            placeholder="Поиск по каталогу…"
+            aria-label="Поиск по каталогу"
+            aria-controls="search-results"
+            autocomplete="off"
+          />
+          <div class="search-results" id="search-results" hidden>
+            <a href="#product" id="search-product">Ананасовый улун</a>
+            <p id="search-empty" hidden>Ничего не найдено</p>
+          </div>
+        </form>
+        <div class="header-actions">
+          <a
+            class="icon-button header-action"
+            href="https://teaboom.ru/login"
+            aria-label="Личный кабинет"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-user" /></svg>
+            <span class="action-label">Личный кабинет</span>
+          </a>
+          <button
+            class="icon-button header-action header-cart"
+            id="cart-button"
+            type="button"
+            aria-label="Корзина: 0 шт."
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-cart" /></svg>
+            <span class="action-label">Корзина</span>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+      <div class="nav-row">
+        <nav class="page-width main-nav" id="site-nav" aria-label="Основная навигация">
+          <a href="https://teaboom.ru/category-root">Каталог чая</a>
+          <a href="https://teaboom.ru/category-posuda-i-aksessuary">Посуда</a>
+          <a href="https://teaboom.ru/category-sladosti">Сладости</a>
+          <a href="https://teaboom.ru/category-posuda-i-aksessuary">Аксессуары</a>
+          <a href="#purchase-form">Акции</a>
+          <a href="https://teaboom.ru/page/nashi-servisy">О нас</a>
+          <a href="https://teaboom.ru/shipping/">Доставка</a>
+          <a href="https://teaboom.ru/contact">Контакты</a>
+          <span class="nav-highlight" aria-hidden="true"></span>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-width">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol>
+          <li><a href="https://teaboom.ru/category-root">Каталог</a></li>
+          <li><a href="https://teaboom.ru/category-root">Чай</a></li>
+          <li><a href="https://teaboom.ru/category-ulun">Улун</a></li>
+          <li aria-current="page">Ананасовый улун</li>
+        </ol>
+      </nav>
+
+      <article class="product" id="product" aria-labelledby="product-title">
+        <figure class="gallery" aria-label="Фотографии товара">
+          <div class="gallery-rail">
+            <button
+              class="gallery-thumb is-active"
+              type="button"
+              data-gallery-image="bowl"
+              aria-label="Фото 1: чай в чаше"
+              aria-pressed="true"
+            >
+              <img src="./assets/tea-bowl-thumb.avif" alt="" width="160" height="160" />
+            </button>
+            <button
+              class="gallery-thumb"
+              type="button"
+              data-gallery-image="cup"
+              aria-label="Фото 2: чайный настой"
+              aria-pressed="false"
+            >
+              <img src="./assets/tea-cup-thumb.avif" alt="" width="160" height="160" />
+            </button>
+            <button
+              class="gallery-thumb"
+              type="button"
+              data-gallery-image="macro"
+              aria-label="Фото 3: чай крупным планом"
+              aria-pressed="false"
+            >
+              <img src="./assets/tea-macro-thumb.avif" alt="" width="160" height="160" />
+            </button>
+            <button
+              class="gallery-thumb"
+              type="button"
+              data-gallery-image="pineapple"
+              aria-label="Фото 4: ананас"
+              aria-pressed="false"
+            >
+              <img src="./assets/tea-pineapple-thumb.avif" alt="" width="160" height="160" />
+            </button>
+            <button
+              class="gallery-thumb"
+              type="button"
+              data-gallery-image="package"
+              aria-label="Фото 5: иллюстрация упаковки"
+              aria-pressed="false"
+            >
+              <img src="./assets/tea-package-thumb.avif" alt="" width="160" height="160" />
+            </button>
+          </div>
+          <div class="gallery-main">
+            <img
+              class="gallery-image"
+              id="gallery-image"
+              src="./assets/tea-bowl.avif"
+              srcset="
+                ./assets/tea-bowl-480.avif  480w,
+                ./assets/tea-bowl-640.avif  640w,
+                ./assets/tea-bowl-672.avif  672w,
+                ./assets/tea-bowl-768.avif  768w,
+                ./assets/tea-bowl.avif     1024w
+              "
+              sizes="(width < 640px) calc(100vw - 40px), (width < 1320px) 560px, 40vw"
+              alt="Ананасовый улун с цукатами в керамической чаше"
+              width="1024"
+              height="1024"
+              fetchpriority="high"
+            />
+            <span class="photo-badge">
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-leaf" />
+              </svg>
+              Светлый улун
+            </span>
+            <button
+              class="image-zoom icon-button"
+              id="image-zoom"
+              type="button"
+              aria-label="Увеличить фотографию"
+              aria-haspopup="dialog"
+              aria-controls="image-dialog"
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="#i-zoom" />
+              </svg>
+            </button>
+          </div>
+        </figure>
+
+        <div class="product-details">
+          <header class="product-heading">
+            <div class="product-actions">
+              <button
+                class="icon-button favorite-button round-button"
+                type="button"
+                aria-label="Добавить товар в избранное"
+                aria-pressed="false"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-heart" />
+                </svg>
+              </button>
+              <button
+                class="icon-button round-button"
+                id="share-button"
+                type="button"
+                aria-label="Скопировать ссылку на товар"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-share" />
+                </svg>
+              </button>
+              <span class="share-status" id="share-status" role="status"></span>
+            </div>
+            <h1 class="product-title" id="product-title">Ананасовый улун</h1>
+            <p class="product-category">
+              <a href="https://teaboom.ru/category-aromatizirovannyj-ulun">
+                Ароматизированный улун
+              </a>
+            </p>
+          </header>
+
+          <div class="review-row">
+            <a
+              class="review-link"
+              href="https://teaboom.ru/product/ananasovij-ulun#reviews_for_product"
+            >
+              <span class="rating-stars" aria-hidden="true">
+                <svg class="icon"><use href="#i-star" /></svg
+                ><svg class="icon"><use href="#i-star" /></svg
+                ><svg class="icon"><use href="#i-star" /></svg
+                ><svg class="icon"><use href="#i-star" /></svg
+                ><svg class="icon"><use href="#i-star" /></svg>
+              </span>
+              Оставить отзыв
+            </a>
+            <p class="availability">В наличии</p>
+            <p class="product-sku">
+              Артикул:
+              <span id="product-sku">01309</span>
+            </p>
+          </div>
+
+          <section class="product-intro" aria-label="Короткое описание товара">
+            <p>
+              Светлый фуцзяньский улун с ароматом спелого ананаса. Скрученные листья медленно
+              раскрываются, давая прозрачный, светло-янтарный настой. Нота свежей зелени
+              переплетается с ярким ананасовым вкусом.
+            </p>
+          </section>
+
+          <form class="product-purchase" id="purchase-form" aria-label="Выбор фасовки и покупка">
+            <details class="packaging-selector" id="packaging-selector" open>
+              <summary>
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-package" />
+                </svg>
+                <span class="sr-only">Выбрать фасовку:</span>
+                <span data-selected-label>5 кг · Максимальная выгода</span>
+                <svg class="selector-chevron" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="m6 3 5 5-5 5" />
+                </svg>
+              </summary>
+              <fieldset class="packaging">
+                <legend>
+                  <span>Выберите фасовку</span>
+                  <span class="packaging-hint">
+                    <svg class="icon" aria-hidden="true">
+                      <use href="#i-tea-leaf" />
+                    </svg>
+                    Чем больше объём — тем выгоднее!
+                  </span>
+                </legend>
+                <div class="packaging-options">
+                  <label class="packaging-option">
+                    <input
+                      type="radio"
+                      name="weight"
+                      value="100"
+                      aria-label="100 г"
+                      aria-describedby="packaging-details-100"
+                    />
+                    <span class="packaging-label">
+                      <span class="packaging-weight">100 г</span>
+                      <span class="packaging-note">
+                        <span class="packaging-tag packaging-tag-sample">На пробу</span>
+                      </span>
+                      <span id="packaging-details-100">
+                        <span class="packaging-price">326,40 ₽</span>
+                        <span class="packaging-unit">326,40 ₽ / 100 г</span>
+                        <span class="packaging-saving packaging-saving-base">Базовая фасовка</span>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="packaging-option">
+                    <input
+                      type="radio"
+                      name="weight"
+                      value="500"
+                      aria-label="500 г"
+                      aria-describedby="packaging-details-500"
+                    />
+                    <span class="packaging-label">
+                      <span class="packaging-weight">500 г</span>
+                      <span class="packaging-note">
+                        <span class="packaging-tag packaging-tag-value">Экономия 12%</span>
+                      </span>
+                      <span id="packaging-details-500">
+                        <span class="packaging-price">1 432 ₽</span>
+                        <span class="packaging-unit">286,40 ₽ / 100 г</span>
+                        <span class="packaging-saving">Выгода 200 ₽</span>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="packaging-option">
+                    <input
+                      type="radio"
+                      name="weight"
+                      value="1000"
+                      aria-label="1000 г"
+                      aria-describedby="packaging-details-1000"
+                    />
+                    <span class="packaging-label">
+                      <span class="packaging-weight">1 кг</span>
+                      <span class="packaging-note">
+                        <span class="packaging-tag packaging-tag-popular">Хит продаж</span>
+                      </span>
+                      <span id="packaging-details-1000">
+                        <span class="packaging-price">2 064 ₽</span>
+                        <span class="packaging-unit">206,40 ₽ / 100 г</span>
+                        <span class="packaging-saving">Выгода 1 200 ₽</span>
+                      </span>
+                    </span>
+                  </label>
+                  <label class="packaging-option">
+                    <input
+                      type="radio"
+                      name="weight"
+                      value="5000"
+                      aria-label="5000 г"
+                      aria-describedby="packaging-details-5000"
+                      checked
+                    />
+                    <span class="packaging-label">
+                      <span class="packaging-weight">5 кг</span>
+                      <span class="packaging-note">
+                        <span class="packaging-tag packaging-tag-best">Максимальная выгода</span>
+                      </span>
+                      <span id="packaging-details-5000">
+                        <span class="packaging-price">6 320 ₽</span>
+                        <span class="packaging-unit">126,40 ₽ / 100 г</span>
+                        <span class="packaging-saving">Выгода 10 000 ₽</span>
+                      </span>
+                    </span>
+                  </label>
+                </div>
+              </fieldset>
+            </details>
+
+            <div class="purchase-card">
+              <div class="purchase-selection">
+                <div>
+                  <p class="selection-caption">Выбранная фасовка</p>
+                  <p class="selection-name" data-selected-label>5 кг · Максимальная выгода</p>
+                </div>
+                <div class="selection-weight" aria-hidden="true">
+                  <svg class="icon"><use href="#i-package" /></svg>
+                  <span data-selected-weight>5 кг</span>
+                </div>
+              </div>
+
+              <div class="purchase-summary" aria-live="polite" aria-atomic="true">
+                <p class="sr-only" id="summary-label">Сумма за 1 упаковку</p>
+                <div class="price-block">
+                  <p class="product-price">
+                    <span class="sr-only">Цена:</span>
+                    <span id="product-price">6 320 ₽</span>
+                  </p>
+                  <div class="price-comparison">
+                    <p class="old-price">
+                      <span class="sr-only">Старая цена:</span>
+                      <del id="product-old-price">8 710 ₽</del>
+                    </p>
+                    <p class="discount">
+                      <span class="sr-only">Скидка:</span>
+                      <span id="product-discount">−27%</span>
+                    </p>
+                  </div>
+                </div>
+                <p class="price-saving" id="price-saving">Экономия 2 390 ₽</p>
+              </div>
+
+              <div class="purchase-actions">
+                <div class="quantity-control">
+                  <label class="sr-only" for="quantity">Количество упаковок</label>
+                  <div class="quantity-stepper">
+                    <button
+                      type="button"
+                      data-quantity-step="-1"
+                      aria-label="Уменьшить количество"
+                      disabled
+                    >
+                      −
+                    </button>
+                    <input
+                      type="number"
+                      name="quantity"
+                      id="quantity"
+                      value="1"
+                      min="1"
+                      max="99"
+                      step="1"
+                      required
+                      inputmode="numeric"
+                      aria-label="Количество упаковок"
+                    />
+                    <button type="button" data-quantity-step="1" aria-label="Увеличить количество">
+                      +
+                    </button>
+                  </div>
+                </div>
+                <button class="add-to-cart" type="submit">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="#i-cart" />
+                  </svg>
+                  <span class="cart-button-copy">
+                    В корзину
+                    <span class="cart-button-total">
+                      ·
+                      <span id="cart-button-price">6 320 ₽</span>
+                    </span>
+                  </span>
+                </button>
+              </div>
+            </div>
+            <div class="cart-notice" id="cart-notice" hidden>
+              <svg class="notice-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <path d="m7 12 3 3 7-7" />
+              </svg>
+              <div role="status">
+                <p class="notice-title">Ваш чай добавлен в корзину</p>
+                <p id="purchase-message"></p>
+                <p class="cart-summary" id="cart-summary"></p>
+              </div>
+              <button
+                id="notice-close"
+                class="icon-button"
+                type="button"
+                aria-label="Закрыть уведомление"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-close" />
+                </svg>
+              </button>
+            </div>
+            <noscript>
+              <p class="noscript-message">
+                Для переключения фасовок и работы галереи включите JavaScript. Сейчас показана
+                фасовка 5000 г.
+              </p>
+            </noscript>
+          </form>
+        </div>
+      </article>
+
+      <section class="product-information" aria-label="Информация о чае">
+        <div class="product-tabs" role="tablist" aria-label="Подробнее о товаре">
+          <button
+            id="tab-about"
+            role="tab"
+            type="button"
+            aria-selected="true"
+            aria-controls="panel-about"
+          >
+            О чае
+          </button>
+          <button
+            id="tab-composition"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-composition"
+            tabindex="-1"
+          >
+            Состав
+          </button>
+          <button
+            id="tab-brewing"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-brewing"
+            tabindex="-1"
+          >
+            Как заваривать
+          </button>
+          <button
+            id="tab-shipping"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-shipping"
+            tabindex="-1"
+          >
+            Доставка и оплата
+          </button>
+          <button
+            id="tab-reviews"
+            role="tab"
+            type="button"
+            aria-selected="false"
+            aria-controls="panel-reviews"
+            tabindex="-1"
+          >
+            Отзывы
+          </button>
+          <span class="tabs-indicator" aria-hidden="true"></span>
+        </div>
+        <div class="tab-panels">
+          <div
+            class="information-panel"
+            id="panel-about"
+            role="tabpanel"
+            aria-labelledby="tab-about"
+            tabindex="0"
+          >
+            <h2>Гармония вкуса и аромата</h2>
+            <p class="panel-lead">Три причины устроить маленькую чайную паузу.</p>
+            <ul class="visual-story">
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-pineapple-640.avif"
+                  data-srcset="./assets/story-pineapple-320.avif 320w, ./assets/story-pineapple-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Аромат спелого ананаса</h3>
+                  <p>Яркая фруктовая нота с первого глотка.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-oolong-640.avif"
+                  data-srcset="./assets/story-oolong-320.avif 320w, ./assets/story-oolong-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Основа — китайский улун</h3>
+                  <p>Скрученные листья и мягкий вкус свежей зелени.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/detail-brewing-640.avif"
+                  data-srcset="./assets/detail-brewing-320.avif 320w, ./assets/detail-brewing-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="427"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Светло-янтарный настой</h3>
+                  <p>Листья раскрываются — чай наполняется ароматом.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="information-panel"
+            id="panel-composition"
+            role="tabpanel"
+            aria-labelledby="tab-composition"
+            tabindex="0"
+            hidden
+            inert
+          >
+            <h2>Что внутри</h2>
+            <p class="panel-lead">У каждого ингредиента — своя роль во вкусе.</p>
+            <ul class="visual-story">
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-oolong-640.avif"
+                  data-srcset="./assets/story-oolong-320.avif 320w, ./assets/story-oolong-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Китайский бирюзовый чай</h3>
+                  <p>Чайная основа с нежным, свежим вкусом.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-candied-640.avif"
+                  data-srcset="./assets/story-candied-320.avif 320w, ./assets/story-candied-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Цукаты</h3>
+                  <p>Фруктовые кусочки в чайной смеси.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-oil-640.avif"
+                  data-srcset="./assets/story-oil-320.avif 320w, ./assets/story-oil-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <h3>Ароматические масла</h3>
+                  <p>Натуральные масла для ананасового аромата.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div
+            class="information-panel"
+            id="panel-brewing"
+            role="tabpanel"
+            aria-labelledby="tab-brewing"
+            tabindex="0"
+            hidden
+            inert
+          >
+            <h2>Хороший чай — в три шага</h2>
+            <p class="panel-lead">Пара минут, любимая чашка — и можно никуда не спешить.</p>
+            <ol class="visual-story story-steps">
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-spoon-640.avif"
+                  data-srcset="./assets/story-spoon-320.avif 320w, ./assets/story-spoon-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">01</span>
+                  <h3>2 ложки на 500 мл</h3>
+                  <p>Положите чай в прогретый чайник.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/detail-brewing-640.avif"
+                  data-srcset="./assets/detail-brewing-320.avif 320w, ./assets/detail-brewing-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="427"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">02</span>
+                  <h3>Вода 80–85 °C</h3>
+                  <p>Дайте кипятку немного остыть и залейте листья.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-cup-640.avif"
+                  data-srcset="./assets/story-cup-320.avif 320w, ./assets/story-cup-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">03</span>
+                  <h3>Подождите 1–3 минуты</h3>
+                  <p>Разлейте по чашкам. Приятного чаепития!</p>
+                </div>
+              </li>
+            </ol>
+          </div>
+          <div
+            class="information-panel"
+            id="panel-reviews"
+            role="tabpanel"
+            aria-labelledby="tab-reviews"
+            tabindex="0"
+            hidden
+            inert
+          >
+            <h2>За чашкой ананасового улуна</h2>
+            <p class="panel-lead">Примеры отзывов</p>
+            <div class="review-examples">
+              <figure class="review-example">
+                <img
+                  class="review-avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/reviewer-anna-256.avif"
+                  data-srcset="./assets/reviewer-anna-128.avif 128w, ./assets/reviewer-anna-256.avif 256w"
+                  sizes="(width < 640px) 56px, 64px"
+                  alt=""
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  <span class="review-author">Анна</span>
+                  <span class="example-stars" aria-label="5 из 5">★★★★★</span>
+                  <blockquote>
+                    «Ананас чувствуется сразу, а сам чай мягкий. Очень вкусно без сахара — теперь
+                    завариваю по утрам».
+                  </blockquote>
+                </figcaption>
+              </figure>
+              <figure class="review-example">
+                <img
+                  class="review-avatar"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/reviewer-mikhail-256.avif"
+                  data-srcset="./assets/reviewer-mikhail-128.avif 128w, ./assets/reviewer-mikhail-256.avif 256w"
+                  sizes="(width < 640px) 56px, 64px"
+                  alt=""
+                  width="64"
+                  height="64"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>
+                  <span class="review-author">Михаил</span>
+                  <span class="example-stars" aria-label="5 из 5">★★★★★</span>
+                  <blockquote>
+                    «Классный чай! Пахнет ананасом ещё в пакете. На второй заварке вкус спокойнее —
+                    мне так даже больше нравится».
+                  </blockquote>
+                </figcaption>
+              </figure>
+            </div>
+            <a
+              class="review-button"
+              href="https://teaboom.ru/product/ananasovij-ulun#reviews_for_product"
+            >
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m15 4 5 5M4 20l5-1L21 7a2 2 0 0 0-5-5L4 14v6ZM4 20h16" />
+              </svg>
+              Оставить отзыв
+            </a>
+          </div>
+          <div
+            class="information-panel"
+            id="panel-shipping"
+            role="tabpanel"
+            aria-labelledby="tab-shipping"
+            tabindex="0"
+            hidden
+            inert
+          >
+            <h2>От нас — к вашему столу</h2>
+            <p class="panel-lead">Доставляем по Москве, России и в страны СНГ.</p>
+            <ol class="visual-story story-steps">
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-pouch-640.avif"
+                  data-srcset="./assets/story-pouch-320.avif 320w, ./assets/story-pouch-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">01</span>
+                  <h3>Собираем ваш чай</h3>
+                  <p>Выбираем фасовку и бережно упаковываем.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-courier-640.avif"
+                  data-srcset="./assets/story-courier-320.avif 320w, ./assets/story-courier-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">02</span>
+                  <h3>Передаём в доставку</h3>
+                  <p>Посылка отправляется в ваш город.</p>
+                </div>
+              </li>
+              <li>
+                <img
+                  class="story-art"
+                  src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1' height='1'%3E%3C/svg%3E"
+                  data-src="./assets/story-received-640.avif"
+                  data-srcset="./assets/story-received-320.avif 320w, ./assets/story-received-640.avif 640w"
+                  sizes="(width < 640px) 100px, 200px"
+                  alt=""
+                  width="640"
+                  height="640"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="story-caption">
+                  <span class="step-number" aria-hidden="true">03</span>
+                  <h3>Встречайте посылку</h3>
+                  <p>Остаётся открыть пакет и заварить чашку.</p>
+                </div>
+              </li>
+            </ol>
+            <p class="shipping-note">
+              Способ доставки и оплаты, стоимость и срок зависят от адреса и суммы заказа.
+              <a href="https://teaboom.ru/shipping/">
+                Подробнее о доставке и оплате
+                <span aria-hidden="true">↗</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog class="image-dialog" id="image-dialog" aria-label="Увеличенная фотография товара">
+      <form method="dialog">
+        <button class="icon-button dialog-close" aria-label="Закрыть фотографию">
+          <svg class="icon" aria-hidden="true"><use href="#i-close" /></svg>
+        </button>
+      </form>
+      <img
+        id="dialog-image"
+        src="./assets/tea-bowl.avif"
+        alt="Ананасовый улун в керамической чаше"
+        width="1024"
+        height="1024"
+        loading="lazy"
+      />
+    </dialog>
+  </body>
+</html>
