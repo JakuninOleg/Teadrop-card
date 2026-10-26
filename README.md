@@ -2,7 +2,7 @@
 
 Тестовое задание: адаптивная карточка «Ананасовый улун». HTML, CSS и JavaScript без фреймворков.
 
-[Посмотреть страницу](https://jakuninoleg-teadrop-card-5104.twc1.net/)
+[Посмотреть страницу](https://teadrop-card.vercel.app/)
 
 ![PageSpeed / Lighthouse: Mobile 100, Desktop 100](assets/pagespeed.png)
 
